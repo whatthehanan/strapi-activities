@@ -33,6 +33,14 @@
       }
     },
     {
+      "method": "POST",
+      "path": "/activityCreated",
+      "handler": "activities.activityCreated",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "PUT",
       "path": "/activities/:id",
       "handler": "activities.update",

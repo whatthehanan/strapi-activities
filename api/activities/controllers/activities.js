@@ -24,4 +24,16 @@ module.exports = {
       message: "prices updated successfully",
     });
   },
+
+  async activityCreated(ctx) {
+    await strapi.services.email.send(
+      "info@mallorcard.es",
+      "New Activity Created",
+      "a new activity was created"
+    );
+
+    ctx.send({
+      message: "success",
+    });
+  },
 };
