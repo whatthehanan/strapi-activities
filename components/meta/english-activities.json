@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_en_english_activities",
+  "info": {
+    "name": "Activities Meta",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}
