@@ -6,11 +6,11 @@
  */
 
 module.exports = {
-  updatePrice(ctx) {
+  async updatePrice(ctx) {
     const { Discount } = ctx.request.body;
 
     if (!Discount) {
-      ctx.send(
+      return ctx.send(
         {
           message: "invalid request",
         },
@@ -18,6 +18,10 @@ module.exports = {
       );
     }
 
-    return "updating prices";
+    await strapi.services.activities.updatePrice(Discount);
+
+    return ctx.send({
+      message: "prices updated successfully",
+    });
   },
 };
