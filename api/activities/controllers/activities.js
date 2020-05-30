@@ -5,4 +5,19 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+  updatePrice(ctx) {
+    const { Discount } = ctx.request.body;
+
+    if (!Discount) {
+      ctx.send(
+        {
+          message: "invalid request",
+        },
+        400
+      );
+    }
+
+    return "updating prices";
+  },
+};

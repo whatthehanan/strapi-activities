@@ -41,6 +41,14 @@
       }
     },
     {
+      "method": "PUT",
+      "path": "/activities_price",
+      "handler": "activities.updatePrice",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "DELETE",
       "path": "/activities/:id",
       "handler": "activities.delete",
